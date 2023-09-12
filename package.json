@@ -1,0 +1,47 @@
+{
+  "name": "kombo",
+  "private": true,
+  "scripts": {
+    "build": "nx build",
+    "dev": "nx dev",
+    "dev:affected": "nx affected --target=dev",
+    "dev:all": "nx run-many --target=dev --all",
+    "format": "nx run format --project",
+    "format:affected": "nx affected --target=format",
+    "format:all": "nx run-many --target=format --all",
+    "lint": "nx run lint --project",
+    "lint:affected": "nx affected --target lint",
+    "lint:all": "nx run-many --target=lint --all",
+    "start": "nx start",
+    "typecheck": "nx typecheck",
+    "typecheck:affected": "nx affected --target=typecheck",
+    "typecheck:all": "nx run-many --target=typecheck --all"
+  },
+  "engines": {
+    "node": ">=16 <17"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "resolutions": {
+    "@types/react": "17.0.47"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.25",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "nx": "^16.1.3",
+    "nx-cloud": "^16.0.5",
+    "prettier": "^2.7.1",
+    "react": "17",
+    "react-dom": "17",
+    "storybook": "~7.0.10",
+    "typescript": "^4.9.4",
+    "vitest": "^0.25.3"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

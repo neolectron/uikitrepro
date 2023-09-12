@@ -1,0 +1,19 @@
+{
+  "name": "ui-kit",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ui-kit",
+  "projectType": "library",
+  "targets": {
+    "docker": {
+      "executor": "@nx-tools/nx-container:build",
+      "options": {
+        "context": ".",
+        "push": false,
+        "tags": ["registry.digitalocean.com/kombo-registry/ui-kit:latest"],
+        "cache-from": ["type=local,src=/tmp/.buildx-cache"],
+        "cache-to": ["type=local,dest=/tmp/.buildx-cache-new,mode=max"]
+      }
+    }
+  },
+  "tags": ["library", "ui-kit"]
+}

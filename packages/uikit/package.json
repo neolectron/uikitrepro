@@ -1,0 +1,75 @@
+{
+  "name": "@acme/ui-kit",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "format": "prettier --check src",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "prepare": "panda codegen"
+  },
+  "dependencies": {
+    "@dessert-box/react": "^0.4.0",
+    "@pandacss/dev": "^0.14.0",
+    "@radix-ui/react-collapsible": "^1.0.1",
+    "@radix-ui/react-radio-group": "^1.1.1",
+    "@vanilla-extract/css": "^1.9.1",
+    "@vanilla-extract/recipes": "^0.3.0",
+    "@vanilla-extract/sprinkles": "^1.5.0",
+    "classnames": "^2.3.2",
+    "clsx": "^1.2.1",
+    "react-icons": "^4.7.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "~7.0.10",
+    "@storybook/addon-essentials": "^7.4.1",
+    "@storybook/addon-interactions": "^7.4.1",
+    "@storybook/addon-links": "^7.4.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addons": "~7.0.10",
+    "@storybook/blocks": "^7.4.1",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/react": "~7.0.10",
+    "@storybook/react-vite": "^7.4.1",
+    "@storybook/testing-library": "^0.2.0",
+    "@storybook/theming": "~7.0.10",
+    "@types/react": "17.0.47",
+    "@types/react-dom": "17.0.1",
+    "@vanilla-extract/vite-plugin": "^3.6.1",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "eslint-plugin-mdx": "^2.0.5",
+    "postcss": "^8.4.18",
+    "postcss-nested": "^6.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.56.1",
+    "storybook": "^7.4.1",
+    "typescript": "^4.8.4",
+    "vite": "^3",
+    "vite-plugin-dts": "^1.7.1",
+    "vite-plugin-svgr": "^2.2.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-kit.umd.js",
+  "module": "./dist/ui-kit.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-kit.js",
+      "require": "./dist/ui-kit.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  }
+}

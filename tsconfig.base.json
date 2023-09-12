@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES6",
+    "module": "esnext",
+    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "noErrorTruncation": true,
+    "paths": {
+      "@kombo/scraper-flixbus": ["packages/scraper-flixbus/src/index.ts"],
+      "@kombo/scraper-sncf-connect": ["packages/scraper-sncfConnect/src/index.ts"],
+      "@kombo/scraper-blablabus": ["packages/scraper-blablabus/src/index.ts"],
+      "@kombo/scraper-altibus": ["packages/scraper-altibus/src/index.ts"],
+      "@kombo/scraper-types": ["packages/scraper-types/src/index.ts"],
+      "@kombo/scraper-api": ["packages/scraper-api/src/main.ts"],
+      "@kombo/types": ["packages/types/src/index.ts"],
+      "@kombo/web": ["./packages/web/src/lib.ts"],
+      "@kombo/ui-kit": ["./packages/ui-kit/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
